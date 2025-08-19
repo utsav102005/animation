@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .first {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+    .first:hover {
+        transition-duration: 1s;
+        background-color: blue;
+        border-radius: 50%;
+    }
+
+    .second {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: green;
+        animation: myAnim 1s ease-in-out infinite alternate;
+
+    }
+
+    @keyframes pop {
+        from {
+            height: 100px;
+            width: 50px;
+        }
+
+        to {
+            height: 150px;
+            width: 75px;
+            transform: translate(-10px);
+        }
+    }
+
+    @keyframes myAnim {
+        0% {
+            background-color: red;
+            transform: skewY(20deg);
+        }
+
+
+        100% {
+            background-color: green;
+            transform: skewY(-20deg);
+        }
+    }
+
+    .sky {
+        width: 100vw;
+        height: 500px;
+        background-color: lightblue;
+        position: relative;
+    }
+
+    .sun {
+        width: 90px;
+        height: 90px;
+        background-color: yellow;
+        border-radius: 50%;
+        position: absolute;
+        margin: 5px;
+        margin-top: 4%;
+        box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+        animation: sunMove;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 100;
+
+    }
+
+    @keyframes sunMove {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+</style>
+
+<body>
+    <div class="first">
+        Hover over me
+
+    </div>
+
+    <div class="second">
+        hover
+    </div>
+    </div>
+
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="cloud1"></div>
+        <div class="cloud2"></div>
+        <div class="cloud3"></div>
+    </div>
+    <button class="btn">Hover Me</button>
+    <br>
+    <div class="ball"></div>
+    <div class="squishy-ball"></div>
+
+</body>
+
+</html>

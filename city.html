@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .road {
+        width: 100%;
+        height: 150px;
+        background-color: #333;
+        position: relative;
+        margin-top: 300px;
+        text-align: center;
+        color: white;
+        
+    }
+
+    .car {
+        width: 50px;
+        height: 30px;
+        background-color: red;
+        position: absolute;
+        text-align: center;
+        top: 40px;
+        left: 0;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        animation: carAnim 5s linear infinite;
+    }
+
+    .car:nth-child(1) { top: 10px; animation-delay: 0s; }
+    .car:nth-child(2) { top: 30px; animation-delay: 1s; }
+    .car:nth-child(3) { top: 60px; animation-delay: 2s; }
+    .car:nth-child(4) { top: 80px; animation-delay: 2.5s; }
+    .car:nth-child(5) { top: 100px; animation-delay: 3s; }
+
+    @keyframes carAnim {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+</style>
+
+<body>
+    <div class="road">
+        <h1>road</h1>
+        <div class="car">car 1</div>
+        <div class="car">car 2</div>
+        <div class="car">car 3</div>
+        <div class="car">car 4</div>
+        <div class="car">car 5</div>
+    </div>
+</body>
+
+</html>
