@@ -78,6 +78,7 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     z-index: 100;
+    overflow: hidden;
 
 }
 
@@ -98,6 +99,7 @@ body {
     border-radius: 50px;
     position: absolute;
     margin-top: 160px;
+    overflow: hidden;
     animation: cloud1 10s linear infinite;
 
 }
@@ -110,6 +112,7 @@ body {
     position: absolute;
     margin-top: 400px;
     animation: cloud2 15s linear infinite;
+    overflow: hidden;
 
 }
 
@@ -122,6 +125,7 @@ body {
     margin-top: 5px;
     animation: cloud3 20s linear infinite;
     animation-delay: 5s;
+    overflow: hidden;
 
 }
 
